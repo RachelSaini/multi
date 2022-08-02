@@ -13,8 +13,8 @@ load_dotenv()
 service_id_rx = re.compile("#(\d{1,2})")
 authorized_list = json.loads(os.getenv('authorized_list'))
 
-app = Client("my_account", api_id=os.getenv('api_id'),
-             api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token'))
+app = Client("my_account", api_id='924859',
+             api_hash='a4c9a18cf4d8cb24062ff6916597f832', bot_token='1701838946:AAF1i4KaqAbHMOV0_C2cIoOHnIX__XkEZ_I'
 
 help_message = """**Supported upload hosts:**`
 +----+-------------+---------+
@@ -57,12 +57,12 @@ ex: Gdrive to anonfiles:
 ex: TG file to WeTransfer:
 reply to a file with `/up #12`
 
-**Made by [bunny](https://t.me/pseudoboi) 🧪**
+**Made by [@HxBots](https://t.me/hxBots) 🧪**
 """
 if not os.path.exists('Downloads'):
     os.makedirs('Downloads')
 
-print("Bot started", flush=True)
+print("Bot started by @oVo-HxBots", flush=True)
 @app.on_message(filters.text)
 def echo(client, message: Message):
     if not message.chat.id in authorized_list:
