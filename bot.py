@@ -16,8 +16,8 @@ authorized_list = json.loads(os.getenv('authorized_list'))
 app = Client("my_account", api_id='924859',
              api_hash='a4c9a18cf4d8cb24062ff6916597f832', bot_token='1701838946:AAF1i4KaqAbHMOV0_C2cIoOHnIX__XkEZ_I'
 
-help_message = """**Supported upload hosts:**`
-+----+-------------+---------+
+help_message = """**Supported upload hosts:**
+'+----+-------------+---------+
 |    |     Host    | MaxSize |
 +====+=============+=========+
 |  1 |  anonfiles  |  20 GB  |
@@ -47,7 +47,7 @@ help_message = """**Supported upload hosts:**`
 | 13 |  workupload |   2 GB  |
 +----+-------------+---------+
 | 14 |  zippyshare |  500 MB |
-+----+-------------+---------+`
++----+-------------+---------+'
 
 **Supported links: G-Drive url, TG file, DDL**
 
