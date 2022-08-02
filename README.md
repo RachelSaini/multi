@@ -41,11 +41,11 @@ Upload your files to 10+ free hosting services.
 <img src="https://user-images.githubusercontent.com/67633271/177330592-c686e8f6-2e16-4461-9e50-f84effd66969.png" width="500"/>    
 
 - Download the json and save it as `credentials.json`.    
-- `git clone https://github.com/bunnykek/MultiUpload`     
+- `git clone https://github.com/oVo-HxBots/MultiUpload`     
 - Navigate into the `TokenGeneration` directory and follow the [readme.txt](https://github.com/bunnykek/MultiUpload/blob/main/TokenGeneration/readme.txt) for further procedure.
 - Deploy to heroku 
 #### Heroku Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bunnykek/MultiUpload)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/oVo-HxBots/MultiUpload)
 #### Bot commands:
 - `/help` - Helps
 - `/stats` - Shows the total downloaded cache size.
