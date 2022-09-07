@@ -16,7 +16,7 @@ authorized_list = json.loads(os.getenv('authorized_list'))
 app = Client("my_account", api_id=os.getenv('api_id'),
              api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token')
 
- HELP_MESSAGE = """
+help_message = """"
 **Supported upload hosts:**
 '+----+-------------+---------+
 |    |     Host    | MaxSize |
@@ -59,7 +59,7 @@ ex: TG file to WeTransfer:
 reply to a file with `/up #12`
 
 **Made by [@HxBots](https://t.me/hxBots) 🧪**
-"""
+""""
 if not os.path.exists('Downloads'):
     os.makedirs('Downloads')
 
@@ -67,7 +67,7 @@ print("Bot started by @oVo-HxBots", flush=True)
 @app.on_message(filters.text)
 def echo(client, message: Message):
     if '/help' in message.text:
-        message.reply(HELP_MESSAGE, disable_web_page_preview=True, quote=True)
+        message.reply(help_message, disable_web_page_preview=True, quote=True)
         return
     try:
         if '/up' in message.text:
