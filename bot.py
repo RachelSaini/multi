@@ -18,7 +18,6 @@ app = Client("my_account", api_id=os.getenv('api_id'),
              api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token')
 
 
-print("Bot started by @oVo-HxBots", flush=True)
 @app.on_message(filters.text)
 def echo(client, message: Message):
     if '/help' in message.text:
