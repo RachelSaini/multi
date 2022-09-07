@@ -1,4 +1,5 @@
 import json
+from script import HELP_MESSAGE
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from modules.gdrive import gdriveDownload
@@ -16,58 +17,14 @@ authorized_list = json.loads(os.getenv('authorized_list'))
 app = Client("my_account", api_id=os.getenv('api_id'),
              api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token')
 
-help_message = f""""
-**Supported upload hosts:**
-'+----+-------------+---------+
-|    |     Host    | MaxSize |
-+====+=============+=========+
-|  1 |  anonfiles  |  20 GB  |
-+----+-------------+---------+
-|  2 |    Catbox   |  200 MB |
-+----+-------------+---------+
-|  3 |   file.io   |   2 GB  |
-+----+-------------+---------+
-|  4 |   Filemail  |   5 GB  |
-+----+-------------+---------+
-|  5 |    Gofile   |  unlim  |
-+----+-------------+---------+
-|  6 |    MegaUp   |   5 GB  |
-+----+-------------+---------+
-|  7 |   MixDrop   |  unlim  |
-+----+-------------+---------+
-|  8 |  pixeldrain |  10 GB  |
-+----+-------------+---------+
-|  9 |    Racaty   |  unlim  |
-+----+-------------+---------+
-| 10 | transfer.sh |  unlim  |
-+----+-------------+---------+
-| 11 |     Uguu    |  128 MB |
-+----+-------------+---------+
-| 12 |  WeTransfer |   2 GB  |
-+----+-------------+---------+
-| 13 |  workupload |   2 GB  |
-+----+-------------+---------+
-| 14 |  zippyshare |  500 MB |
-+----+-------------+---------+'
-
-**Supported links: G-Drive url, TG file, DDL**
-
-ex: Gdrive to anonfiles:
-`/up gdrive-url #1`
-
-ex: TG file to WeTransfer:
-reply to a file with `/up #12`
-
-**Made by [@HxBots](https://t.me/hxBots) 🧪**
-""""
-if not os.path.exists('Downloads'):
-    os.makedirs('Downloads')
+      if not os.path.exists('Downloads'):
+      os.makedirs('Downloads')
 
 print("Bot started by @oVo-HxBots", flush=True)
 @app.on_message(filters.text)
 def echo(client, message: Message):
     if '/help' in message.text:
-        message.reply(help_message, disable_web_page_preview=True, quote=True)
+        message.reply(SCRIPT.HELP_MESSAGE, disable_web_page_preview=True, quote=True)
         return
     try:
         if '/up' in message.text:
