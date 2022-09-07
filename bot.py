@@ -17,7 +17,7 @@ authorized_list = json.loads(os.getenv('authorized_list'))
 app = Client("my_account", api_id=os.getenv('api_id'),
              api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token')
 
-      if not os.path.exists('Downloads'):
+if not os.path.exists('Downloads'):
       os.makedirs('Downloads')
 
 print("Bot started by @oVo-HxBots", flush=True)
