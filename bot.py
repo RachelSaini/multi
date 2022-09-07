@@ -16,7 +16,7 @@ authorized_list = json.loads(os.getenv('authorized_list'))
 app = Client("my_account", api_id=os.getenv('api_id'),
              api_hash=os.getenv('api_hash'), bot_token=os.getenv('bot_token')
 
-help_message = """"
+help_message=""""
 **Supported upload hosts:**
 '+----+-------------+---------+
 |    |     Host    | MaxSize |
